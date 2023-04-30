@@ -43,7 +43,7 @@ function scss() {
 function browserSync(done) {
   browsersync.init({
     files: "./*.html",
-    startPath: "./html/templates/saas-style-one.html",
+    startPath: "./html/index.html",
     server: {
       baseDir: "./",
       routes: {},
