@@ -1,0 +1,868 @@
+/* Templates CSS */
+/* Color Variables */
+$danger: $red-400;
+$success: $teal-500;
+$warning: $yellow-500;
+$secondary: $gray-700;
+$dark: $gray-900;
+$light-gray: #e4eaec;
+
+/* 1.  Maindemo Page CSS */
+.muse-section {
+  padding: 85px 0;
+}
+hr {
+  border-color: $gray-200;
+  background-color: $gray-200;
+  opacity: 1;
+}
+/* 1.  1.  Header CSS */
+header {
+  .navbar-brand {
+    margin-top: -5px;
+  }
+  .navbar-nav {
+    .nav-item {
+      padding: 0 25px;
+      > .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .dropdown-menu {
+        border: none;
+        min-width: 240px;
+        border-radius: 6px;
+        margin-top: 0;
+        margin-left: 0;
+        .dropdown-item {
+          font-size: 14px;
+          font-family: $montserrat-font;
+          font-weight: $font-weight-semibold;
+          padding: 8px 20px;
+          color: $gray-700;
+          margin: 0;
+          .badge {
+            position: relative;
+            top: -1px;
+          }
+          .mt-2 {
+            margin-top: 0.40rem !important;
+          }
+          &:hover {
+            color: $success;
+            background-color: transparent;
+            svg path {
+              fill: $success;
+            }
+          }
+          &:focus {
+            background-color: transparent;
+          }
+        }
+      }
+      &.horizontal-menu {
+        .dropdown-menu {
+          padding: 13px 15px;
+         > li {
+            list-style: none;
+            small {
+              padding: 6px 20px;
+              color: $gray-600;
+            }
+            ul {
+              padding-left: 0;
+              li {
+                list-style: none;
+                .dropdown-item {
+                  padding: 6px 20px;
+                }
+              }
+            }
+          }
+          &.show {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 13px 15px;
+          }
+        }
+      }
+    }
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .nav-link {
+    color: $black-600;
+    font-family: $montserrat-font;
+    font-weight: $font-weight-semibold;
+    font-size: 14px;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.overlay-center {
+  position: relative;
+  .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+}
+.link-success {
+  &:hover, &:focus {
+    color: $dark;
+    svg path {
+      fill: $dark;
+    }
+  }
+}
+.maindemo-template {
+  .btn-close {
+    background: transparent;
+    padding: 0;
+  }
+  .nav-link {
+    &:hover {
+      color: $success;
+      svg path {
+        fill: $success;
+      }
+    }
+  }
+  .text-success:not(.bi):hover {
+    color: $dark !important;
+  }
+  .bg-dark {
+    .text-success:hover {
+      color: $white !important;
+    }
+  }
+  .btn-outline-dark {
+    &:hover {
+      background-color: $success;
+      border-color: $success;
+    }
+  }
+  .form-switch {
+    .form-check-input:checked {
+      background-color: $success;
+      border-color: $success;
+    }
+  }
+  .btn-success:hover {
+    background-color: $dark !important;
+    border-color: $dark !important;
+    color: $white !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: $success;
+  }
+  .bg-black-600 {
+    .text-success {
+      &:hover {
+        color: $white !important;
+      }
+    }
+    a {
+      &:hover {
+        svg path {
+          fill: $gray-400 !important;
+        }
+      }
+    }
+  }
+}
+/* 1.  2.  Footer CSS */
+.footer-link {
+  li {
+    a {
+      color: $gray-700;
+      &:hover {
+        color: $success;
+      }
+      .badge-success {
+        background-color: $teal-500;
+      }
+    }
+    + li {
+      margin-top: 8px;
+    }
+  }
+}
+.third-footer {
+  .footer-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      margin: 10px 25px;
+    }
+  }
+}
+.social-icons {
+  text-align: right;
+  a {
+    &:hover {
+      color: $success;
+      svg path {
+        fill: $teal-500;
+      }
+    }
+    + a {
+      margin-left: 20px;
+    }
+    svg path {
+      fill: $gray-600;
+    }
+  }
+}
+
+/* 5. Saas Page CSS */
+.has-line {
+  &:hover {
+    &:before {
+      background-color: $gray-400;
+    }
+  }
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 40px;
+    height: 1px;
+    background-color: $white;
+    content: '';
+    transition: $transition4;
+  }
+}
+.saas-template {
+  color: $white;
+  h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    color: inherit;
+  }
+  .docs-menu {
+    > a {
+      color: $white;
+    }
+  }
+  .text-muted {
+    color: $gray-500 !important;
+  }
+  header {
+    .nav-link {
+      color: $white;
+    }
+  }
+  a:not(.btn):not(.nav-link):hover {
+    color: $primary !important;
+  }
+  .muse-brands {
+    &:hover {
+      svg {
+        &:hover {
+          fill: $white;
+          * {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  p a.text-danger, .text-danger {
+    &:hover {
+      color: $white !important;
+    }
+  }
+  footer {
+    h6 {
+      color: $white;
+    }
+    hr {
+      border-color: $gray-800;
+      background-color: $gray-800;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        color: $gray-600;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .social-icons {
+    a {
+      color: $gray-600;
+      &:hover {
+        color: $primary;
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+  .nav-link:hover {
+    color: $primary;
+    svg path {
+      fill: $primary;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        .dropdown-item:hover {
+          color: $primary;
+          svg path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+  .muse-card:hover {
+    a {
+      color: $primary;
+    }
+  }
+  .play-btn {
+    &:hover {
+      background-color: $red-400 !important;
+      color: $white;
+      border-color: $red-400 !important;
+    }
+  }
+  .bg-gray-800 {
+    background-color: $black-600;
+  }
+  .intigration-element {
+    a {
+      &:hover {
+        background-color: $black-700;
+        border-radius: 36px;
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: $danger;
+  }
+  .has-theme-hover {
+    &:hover {
+      background: $danger;
+      .btn-danger {
+        background-color: $gray-800 !important;
+        border-color: $gray-800 !important;
+      }
+    }
+  }
+  .nav-pills {
+    padding: 6px;
+    .nav-link {
+      font-weight: $font-weight-semibold;
+      padding: 0.37rem 1rem;
+      color: $white;
+      border-radius: 50px;
+      &.active {
+        background-color: $primary;
+      }
+    }
+  }
+  .tabs-has {
+    padding: 6px;
+    .nav-link {
+      background-color: $black-600;
+      @include border-radius(12px);
+      padding: 28px 35px 35px;
+      color: $white;
+      margin-bottom: 25px;
+      &.active {
+        background-color: $primary;
+      }
+    }
+  }
+  .less-value {
+    font-weight: $font-weight-normal;
+    margin-left: 8px;
+    color: $gray-500;
+  }
+  .swiper-pagination {
+    &.swiper-pagination-clickable {
+      position: static;
+      margin-top: 35px;
+      .swiper-pagination-bullet {
+        background-color: $gray-200;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $danger;
+      }
+    }
+  }
+  .users-watch {
+    a {
+      &:hover {
+        .circle {
+          background-color: $danger !important;
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  .btn-link {
+    &.link-danger {
+      &:hover {
+        color: $white;
+        svg path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+/* 26. Header Footer Page CSS */
+@media screen and (min-width: 992px) {
+  header {
+    .navbar-nav {
+      .nav-item {
+        &.horizontal-menu {
+          .dropdown-menu {
+            &.show {
+              flex-wrap: nowrap;
+            }
+          }
+        }
+      }
+    }
+    .dropdown {
+      &:hover {
+        > .dropdown-menu {
+          display: block;
+        }
+        &.horizontal-menu {
+          .dropdown-menu, .dropdown-menu.show {
+            display: flex;
+            flex-wrap: nowrap;
+          }
+        }
+      }
+      > .dropdown-menu {
+        .dropright{
+          &:hover {
+            .dropdown-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .navbar-nav {
+      li {
+        &:first-child {
+          .dropdown-menu {
+            .dropright {
+              .dropdown-menu {
+                margin-top: -8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  /* Normal CSS */
+  h5 {
+    font-size: 1.05rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  /* Normal CSS */
+  .display-3 {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+  }
+  .lh-lg {
+    line-height: 1.5 !important;
+  }
+  h4, .h4 {
+    line-height: 1.75rem;
+  }
+  p {
+    line-height: 24px;
+  }
+  /* Header CSS */
+  .navbar-toggler {
+    padding: 0;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  .feature-list {
+    padding-left: 0;
+  }
+  header {
+    .navbar-nav {
+      .nav-item {
+        padding: 15px 0;
+        border-bottom: 1px solid $gray-300;
+        .dropdown-menu {
+          left: 0;
+          transform: translateX(0);
+        }
+        svg {
+          float: right;
+          margin-top: 7px;
+        }
+        &.horizontal-menu {
+          .dropdown-menu {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            &.show {
+            padding-left: 0;
+            padding-right: 0;
+            }
+            > li {
+              small {
+                padding: 8px 10px;
+              }
+              ul {
+                li {
+                  .dropdown-item {
+                    padding: 8px 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ~ .btn {
+        width: 100%;
+      }
+    }
+  }
+  .muse-header {
+    position: relative;
+    .navbar {
+      position: static;
+    }
+    .navbar-collapse {
+      position: absolute;
+      top: 80px;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-shadow: 0 2px 3px rgba($black, 0.04);
+      left: 0;
+      right: 0;
+      background-color: $white;
+      border-top: 1px solid $gray-300;
+      z-index: 9;
+    }
+  }
+  .muse-section {
+    padding: 40px 0;
+  }
+  /* Saas Page CSS */
+  .saas-template {
+    header {
+      .navbar-nav {
+        .nav-item {
+          border-color: $gray-700;
+          .dropdown-menu {
+            .dropdown-item {
+              color: $white;
+              svg path {
+                fill: $white;
+              }
+            }
+            li {
+              small {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .muse-header {
+      .navbar-collapse {
+        background-color: $black-600;
+        border-color: $gray-700;
+      }
+    }
+    h1.display-2 {
+      br {
+        display: none;
+      }
+    }
+    .fs-20 {
+      font-size: 17px;
+    }
+  }
+  header {
+    .navbar-nav {
+      .nav-link {
+        padding: 0;
+      }
+      .nav-item {
+        .dropdown-menu {
+          box-shadow: none !important;
+          border-radius: 0;
+          padding: 6px 0 0;
+          background-color: transparent;
+          .dropdown-item {
+            padding: 8px 10px;
+          }
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    &.collapsed {
+      .menu-close {
+        display: none;
+      }
+      .menu-icon {
+        display: block;
+      }
+    }
+    .menu-icon {
+      display: none;
+    }
+    .menu-close {
+      display: block;
+    }
+  }
+  .number-list {
+    margin-bottom: 30px;
+  }
+  .brand-sub-title {
+    padding-left: 40px;
+    &:after {
+      width: 35px;
+    }
+  }
+  .tabs-has {
+    margin-bottom: 25px;
+    padding: 0 !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* Maindemo Page CSS */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .h-md-100 {
+    height: auto;
+  }
+  h1, h3 {
+    br {
+      display: none;
+    }
+  }
+  /* Normal CSS */
+  .h5, h5 {
+    font-size: 1.20rem;
+  }
+  .fs-32 {
+    font-size: 24px !important;
+  }
+  .display-2 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+  .display-3 {
+    font-size: 3rem;
+    line-height: 3.75rem;
+  }
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  p.big {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  h3, .h3 {
+    line-height: 1.75rem;
+  }
+  h2, .h2 {
+    line-height: 2rem;
+  }
+  .card.h-100 {
+    height: auto !important;
+    margin-bottom: 20px;
+  }
+  .feature-list {
+    margin-bottom: 0px;
+    padding-left: 0;
+    li {
+      padding: 18px;
+    }
+  }
+  /* Header Footer Page CSS */
+  .third-footer {
+    .footer-link {
+      li {
+        margin: 5px 18px;
+      }
+    }
+  }
+  /* Saas Page CSS */
+  .saas-template {
+    .intigration-element {
+      padding-top: 20px;
+    }
+    .overlay-center {
+      .btn {
+        min-width: initial;
+        &.play-btn {
+          font-size: 24px;
+          height: 75px;
+          width: 75px;
+        }
+      }
+    }
+    .tabs-has {
+      .nav-link {
+        padding: 28px 25px 30px;
+      }
+    }
+    .muse-brands {
+      .swiper-clients {
+        .swiper-slide {
+          text-align: center;
+        }
+      }
+    }
+    #switch-content {
+      .text-gray-600 {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* Normal CSS */
+  .display-3 {
+    font-size: 2rem;
+    line-height: 2.75rem;
+  }
+  .display-2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  h3 {
+    line-height: 2rem;
+  }
+  .display-4 {
+    font-size: 2rem;
+  }
+  .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn {
+    height: 42px;
+    font-size: 15px;
+  }
+  .btn-xl, .btn-group-xl > .btn {
+    height: 52px;
+    padding: 6px 22px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .btn-xl {
+    height: 58px;
+  }
+  p.big {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .input-group-lg .btn-lg {
+    height: 48px;
+  }
+  .muse-header {
+    .navbar-brand {
+      max-width: 140px;
+    }
+
+    .navbar-collapse {
+      top: 68px;
+    }
+  }
+  /* Footer CSS */
+  .social-icons {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* Normal CSS */
+  .btn-xl {
+    height: 52px;
+  }
+  .display-2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .display-4 {
+    font-size: 1.75rem;
+  }
+  .muse-section {
+    .input-group {
+      flex-direction: column;
+      .form-control {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 0.3rem !important;
+        font-size: 16px;
+      }
+      .btn {
+        margin-left: 0;
+        border-radius: 0.3rem !important;
+        &.btn-lg {
+          height: 42px;
+        }
+      }
+    }
+  }
+  h2 br {
+    display: none;
+  }
+  .muse-section {
+    padding: 20px 0;
+  }
+  .muse-header {
+    .navbar-collapse {
+      top: 56px;
+    }
+  }
+  .footer-link {
+    li {
+      a {
+        font-size: 14px;
+      }
+      + li {
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
