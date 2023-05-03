@@ -41,7 +41,7 @@ function scss() {
 function browserSync(done) {
   browsersync.init({
     files: "./*.html",
-    startPath: "./html/index.html",
+    startPath: "./index.html",
     server: {
       baseDir: "./",
       routes: {},
@@ -67,12 +67,11 @@ function watch() {
   gulp.watch('./assets/scss/**/*.scss', scss);
   gulp.watch(
     [
+      './*.html',
       './html/**/*.html'
     ],
     gulp.series(browserSyncReload)
   );
-  gulp.watch('./snippets/partials/**/*.html');
-  gulp.watch('./documentation/partials/**/*.html');
 }
 
 // Copy Vendors - a utility to copy client-side dependencies into a folder
