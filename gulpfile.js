@@ -4,9 +4,7 @@ const gulp                   = require('gulp');
 const sass                   = require('gulp-sass');
 const autoprefixer           = require('gulp-autoprefixer');
 const rename                 = require('gulp-rename');
-const concat                 = require('gulp-concat');
 const cleanCSS               = require('gulp-clean-css');
-const uglify                 = require('gulp-uglify-es').default;
 const browsersync            = require('browser-sync').create();
 
 // Gulp plumber error handler - displays if any error occurs during the process on your command
@@ -77,34 +75,10 @@ function watch() {
   gulp.watch('./documentation/partials/**/*.html');
 }
 
-// JavaSript minifier - merges and minifies the below given list of Space libraries into one theme.min.js
-function minJS() {
-  return gulp
-    .src([
-      './assets/js/theme-custom.js',
-    ])
-    .pipe(concat('theme.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/assets/js/'));
-}
-
 // Copy Vendors - a utility to copy client-side dependencies into a folder
 function copyVendors() {
   return gulp
     .src([
-      './node_modules/*shufflejs/**/*',
-      './node_modules/*swiper/**/*',
-      './node_modules/*typed.js/**/*',
-      './node_modules/*simplebar/**/*',
-      './node_modules/*progressbar/**/*',
-      './node_modules/*purecounterjs/**/*',
-      './node_modules/*plyr/**/*',
-      './node_modules/*lodash/**/*',
-      './node_modules/*flatpickr/**/*',
-      './node_modules/*highcharts/**/*',
-      './node_modules/*dropzone/**/*',
-      './node_modules/*choices-master/**/*',
-      './node_modules/*bootstrap-icons/**/*',
       './node_modules/*bootstrap/**/*',
       './node_modules/*aos/**/*',
     ])
@@ -113,6 +87,5 @@ function copyVendors() {
 
 // Gulp Tasks
 gulp.task('default', gulp.parallel(watch, scss, browserSync));
-gulp.task('minJS', minJS);
 gulp.task('copyVendors', copyVendors);
-gulp.task('dist', gulp.series(copyVendors, minJS));
+gulp.task('dist', gulp.series(copyVendors));
