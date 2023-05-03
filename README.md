@@ -1,11 +1,4 @@
-# Welcome to müse Bootstrap 5 template!
-
-**Müse** is a multipurpose template fully coded in HTML and CSS, built using the latest Bootstrap 5 framework. It's packed with useful features and integrations including Gulp and SCSS. müse was built for web developers and designers to help them build web pages faster and smarter. 
-
-
-# Documentation
-
-You can find detailed documentation for müse template in your downloaded folder. `documentation/index.html`
+# Ostara Website
 
 ## Gulp
 
@@ -26,7 +19,3 @@ Some SASS functions:
 -   Mixins
 -   Inheritance
 -   Operators
-
-## License
-
-**müse** is licensed under Themeforest. For more information, head to: [Themeforest License Page](https://themeforest.net/licenses/standard)
