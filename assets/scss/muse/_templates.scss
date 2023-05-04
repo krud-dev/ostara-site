@@ -239,6 +239,58 @@ header {
     transition: $transition4;
   }
 }
+.muse-collapes {
+  .card {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $gray-800 !important;
+    padding: 0.5rem 0;
+    .card-header {
+      background-color: transparent;
+      border: none;
+      margin-bottom: 0;
+      .btn-light {
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0.75rem 2rem 0.75rem 0 !important;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: none;
+        position: relative;
+        &[aria-expanded="true"] {
+          &:before {
+            display: none;
+          }
+        }
+        &:after {
+          content: '';
+          height: 2px;
+          width: 20px;
+          background-color: $gray-600;
+          border-radius: 10px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+        &:before {
+          content: '';
+          height: 20px;
+          width: 2px;
+          background-color: $gray-600;
+          border-radius: 10px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 9px;
+        }
+      }
+    }
+    .card-body {
+      padding: 0 0 1.25rem;
+    }
+  }
+}
 .saas-template {
   color: $white;
   h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {

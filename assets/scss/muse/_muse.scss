@@ -191,7 +191,12 @@ select::-ms-expand {
 .btn-light {
   background-color: $white !important;
   border-color: $white !important;
-  color: $black-600;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
 }
 .btn-dark {
   background-color: $black-600 !important;
