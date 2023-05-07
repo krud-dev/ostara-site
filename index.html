@@ -51,7 +51,7 @@
                 </svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav m-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/krud-dev/ostara" target="_blank"
                            rel="noopener noreferrer">Github</a>
@@ -63,8 +63,6 @@
                         <a class="nav-link" href="https://krud.dev/" target="_blank" rel="noopener noreferrer">Blog</a>
                     </li>
                 </ul>
-                <a href="https://github.com/krud-dev/ostara/releases/latest" target="_blank" rel="noopener noreferrer"
-                   class="btn btn-lg btn-outline-success rounded-pill my-3 my-lg-0 ms-lg-5">Download</a>
             </div>
         </nav>
     </div>
@@ -78,9 +76,35 @@
                     <h1 class="display-2">FOSS<br> Admin App for<br> <span class="text-primary">Spring Boot</span></h1>
                     <h2 class="mb-0 pb-md-3 mt-2">Monitor and Manage Spring Boot Applications <br
                             class="d-none d-md-block">in Real-Time with Ostara for Spring</h2>
-                    <a href="https://docs.ostara.dev/getting-started/quick-start" target="_blank"
-                       rel="noopener noreferrer" class="btn btn-xl btn-success rounded-pill my-4">Quick Start</a>
+
+                    <div class="my-4 d-flex flex-row align-items-center justify-content-center gap-3 flex-wrap">
+                        <div class="btn-group" role="group">
+                            <a href="https://github.com/krud-dev/ostara/releases/"
+                               class="btn btn-xl btn-outline-success download-link">Download Ostara</a>
+
+                            <div class="btn-group" role="group">
+                                <button id="btnDownload1" type="button"
+                                        class="btn btn-xl btn-outline-success dropdown-toggle px-4"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="btnDownload1">
+                                    <li><a class="dropdown-item" href="#" target="_blank"
+                                           rel="noopener noreferrer">Windows 64bit</a></li>
+                                    <li><a class="dropdown-item" href="#" target="_blank"
+                                           rel="noopener noreferrer">macOS</a></li>
+                                    <li><a class="dropdown-item" href="#" target="_blank" rel="noopener noreferrer">macOS
+                                        (Apple Silicon)</a></li>
+                                    <li><a class="dropdown-item" href="#" target="_blank"
+                                           rel="noopener noreferrer">Linux 64bit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="https://docs.ostara.dev/getting-started/quick-start" target="_blank"
+                           rel="noopener noreferrer" class="btn btn-xl btn-outline-success">Quick Start Guide</a>
+                    </div>
                 </div>
+
                 <div class="mt-1 mt-md-3 overlay-center" data-aos="fade-up" data-aos-delay="100">
                     <img src="assets/img/dashboard.png" class="img-fluid" alt="Ostara instance dashboard">
                 </div>
@@ -367,7 +391,8 @@
                         <div class="col-lg-8">After developing and maintaining 100s of microservices,
                             a coomon pain point that we faced is monitoring and managment of these microservices,
                             for multiple clients and multiple environments.
-                            We used many of the availible tools to try and solve this problem, but many required us to host the solution,
+                            We used many of the availible tools to try and solve this problem, but many required us to
+                            host the solution,
                             and make changes to our services.</br></br>
                             One of our main goals with Ostara was to create a tool that just works out
                             of the box, without needing anything besides a functioning Actuator API on the other end.
@@ -410,11 +435,12 @@
                 <div id="collapsefive" class="collapse" aria-labelledby="headingfive"
                      data-bs-parent="#accordionExample">
                     <div class="card-body lh-lg">
-                        <div class="col-lg-8">Ostara is completely free! (and Open-Source). You can download it for free <a
-                                href="https://github.com/krud-dev/ostara/releases/latest" target="_blank"
-                                rel="noopener noreferrer">here</a> and check out the code <a
-                                href="https://github.com/krud-dev/ostara" target="_blank"
-                                rel="noopener noreferrer">here</a>.
+                        <div class="col-lg-8">Ostara is completely free! (and Open-Source). You can download it for free
+                            <a
+                                    href="https://github.com/krud-dev/ostara/releases/latest" target="_blank"
+                                    rel="noopener noreferrer">here</a> and check out the code <a
+                                    href="https://github.com/krud-dev/ostara" target="_blank"
+                                    rel="noopener noreferrer">here</a>.
                         </div>
                     </div>
                 </div>
@@ -505,7 +531,7 @@
                         <p class="ps-xl-4">(and it is free...)</p>
                         <div class="my-4 ps-xl-4">
                             <a href="https://github.com/krud-dev/ostara/releases/latest" target="_blank"
-                               rel="noopener noreferrer" class="btn btn-xl btn-success rounded-pill">Download Now</a>
+                               rel="noopener noreferrer" class="btn btn-xl btn-success">Download Now</a>
                         </div>
                     </div>
                 </div>
@@ -535,14 +561,14 @@
                     </li>
                     <li>
                         <a href="https://docs.ostara.dev/getting-started/quick-start" target="_blank"
-                           rel="noopener noreferrer">Quick Start</a>
+                           rel="noopener noreferrer">Quick Start Guide</a>
                     </li>
                     <li>
                         <a href="https://krud.dev/" target="_blank" rel="noopener noreferrer">Blog</a>
                     </li>
                     <li>
-                        <a href="https://github.com/krud-dev/ostara/releases/latest" target="_blank"
-                           rel="noopener noreferrer">Download</a>
+                        <a href="https://github.com/krud-dev/ostara/releases" target="_blank"
+                           rel="noopener noreferrer">Releases</a>
                     </li>
                 </ul>
             </div>
@@ -581,6 +607,60 @@
     once: true,
     easing: 'ease-out'
   });
+</script>
+<script>
+  function updateDownloadLinks(os) {
+    var downloadLinks = document.getElementsByClassName('download-link');
+    for (var i = 0; i < downloadLinks.length; i++) {
+      switch (os) {
+        case 'Linux':
+          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
+          break;
+        case 'Mac':
+          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
+          break;
+        case 'MacArm':
+          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
+          break;
+        case 'Windows':
+          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
+          break;
+        default:
+          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
+          break;
+      }
+    }
+  }
+
+  if (navigator.userAgentData) {
+    navigator.userAgentData.getHighEntropyValues(['architecture']).then((result) => {
+      var OSName = "Unknown";
+      if (window.navigator.userAgent.toLowerCase().indexOf("windows") !== -1) {
+        OSName = "Windows";
+      } else if (window.navigator.userAgent.toLowerCase().indexOf("mac") !== -1) {
+        if (result.architecture && result.architecture.toLowerCase().indexOf("arm") !== -1) {
+          OSName = "MacArm";
+        } else {
+          OSName = "Mac";
+        }
+      } else if (window.navigator.userAgent.toLowerCase().indexOf("linux") !== -1) {
+        OSName = "Linux";
+      }
+      updateDownloadLinks(OSName);
+    }).catch(() => {
+      updateDownloadLinks("Unknown")
+    });
+  } else {
+    var OSName = "Unknown";
+    if (window.navigator.userAgent.toLowerCase().indexOf("windows") !== -1) {
+      OSName = "Windows";
+    } else if (window.navigator.userAgent.toLowerCase().indexOf("mac") !== -1) {
+      OSName = "Mac";
+    } else if (window.navigator.userAgent.toLowerCase().indexOf("linux") !== -1) {
+      OSName = "Linux";
+    }
+    updateDownloadLinks(OSName);
+  }
 </script>
 </body>
 </html>
