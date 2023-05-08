@@ -88,13 +88,13 @@
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="btnDownload1">
-                                    <li><a class="dropdown-item" href="#" target="_blank"
+                                    <li><a class="dropdown-item download-link-Windows" href="https://github.com/krud-dev/ostara/releases/" target="_blank"
                                            rel="noopener noreferrer">Windows 64bit</a></li>
-                                    <li><a class="dropdown-item" href="#" target="_blank"
+                                    <li><a class="dropdown-item download-link-Mac" href="https://github.com/krud-dev/ostara/releases/" target="_blank"
                                            rel="noopener noreferrer">macOS</a></li>
-                                    <li><a class="dropdown-item" href="#" target="_blank" rel="noopener noreferrer">macOS
+                                    <li><a class="dropdown-item download-link-MacArm" href="https://github.com/krud-dev/ostara/releases/" target="_blank" rel="noopener noreferrer">macOS
                                         (Apple Silicon)</a></li>
-                                    <li><a class="dropdown-item" href="#" target="_blank"
+                                    <li><a class="dropdown-item download-link-Linux" href="https://github.com/krud-dev/ostara/releases/" target="_blank"
                                            rel="noopener noreferrer">Linux 64bit</a></li>
                                 </ul>
                             </div>
@@ -530,8 +530,27 @@
                             work.</h2>
                         <p class="ps-xl-4">(and it is free...)</p>
                         <div class="my-4 ps-xl-4">
-                            <a href="https://github.com/krud-dev/ostara/releases/latest" target="_blank"
-                               rel="noopener noreferrer" class="btn btn-xl btn-success">Download Now</a>
+                            <div class="btn-group" role="group">
+                                <a href="https://github.com/krud-dev/ostara/releases/"
+                                   class="btn btn-xl btn-success download-link">Download Now</a>
+
+                                <div class="btn-group" role="group">
+                                    <button id="btnDownload2" type="button"
+                                            class="btn btn-xl btn-success dropdown-toggle px-4"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="btnDownload2">
+                                        <li><a class="dropdown-item download-link-Windows" href="https://github.com/krud-dev/ostara/releases/" target="_blank"
+                                               rel="noopener noreferrer">Windows 64bit</a></li>
+                                        <li><a class="dropdown-item download-link-Mac" href="https://github.com/krud-dev/ostara/releases/" target="_blank"
+                                               rel="noopener noreferrer">macOS</a></li>
+                                        <li><a class="dropdown-item download-link-MacArm" href="https://github.com/krud-dev/ostara/releases/" target="_blank" rel="noopener noreferrer">macOS
+                                            (Apple Silicon)</a></li>
+                                        <li><a class="dropdown-item download-link-Linux" href="https://github.com/krud-dev/ostara/releases/" target="_blank"
+                                               rel="noopener noreferrer">Linux 64bit</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -608,59 +627,7 @@
     easing: 'ease-out'
   });
 </script>
-<script>
-  function updateDownloadLinks(os) {
-    var downloadLinks = document.getElementsByClassName('download-link');
-    for (var i = 0; i < downloadLinks.length; i++) {
-      switch (os) {
-        case 'Linux':
-          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
-          break;
-        case 'Mac':
-          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
-          break;
-        case 'MacArm':
-          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
-          break;
-        case 'Windows':
-          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
-          break;
-        default:
-          downloadLinks[i].href = 'https://github.com/krud-dev/ostara/releases/latest';
-          break;
-      }
-    }
-  }
-
-  if (navigator.userAgentData) {
-    navigator.userAgentData.getHighEntropyValues(['architecture']).then((result) => {
-      var OSName = "Unknown";
-      if (window.navigator.userAgent.toLowerCase().indexOf("windows") !== -1) {
-        OSName = "Windows";
-      } else if (window.navigator.userAgent.toLowerCase().indexOf("mac") !== -1) {
-        if (result.architecture && result.architecture.toLowerCase().indexOf("arm") !== -1) {
-          OSName = "MacArm";
-        } else {
-          OSName = "Mac";
-        }
-      } else if (window.navigator.userAgent.toLowerCase().indexOf("linux") !== -1) {
-        OSName = "Linux";
-      }
-      updateDownloadLinks(OSName);
-    }).catch(() => {
-      updateDownloadLinks("Unknown")
-    });
-  } else {
-    var OSName = "Unknown";
-    if (window.navigator.userAgent.toLowerCase().indexOf("windows") !== -1) {
-      OSName = "Windows";
-    } else if (window.navigator.userAgent.toLowerCase().indexOf("mac") !== -1) {
-      OSName = "Mac";
-    } else if (window.navigator.userAgent.toLowerCase().indexOf("linux") !== -1) {
-      OSName = "Linux";
-    }
-    updateDownloadLinks(OSName);
-  }
-</script>
+<script src="assets/js/data/urls.js"></script>
+<script src="assets/js/dist/theme.min.js"></script>
 </body>
 </html>
