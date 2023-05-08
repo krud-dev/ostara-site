@@ -1,3 +1,11 @@
+const urls = {
+  Linux: `https://github.com/krud-dev/ostara/releases/download/v${version}/Ostara-${version}.AppImage`,
+  Mac: `https://github.com/krud-dev/ostara/releases/download/v${version}/Ostara-${version}.dmg`,
+  MacArm: `https://github.com/krud-dev/ostara/releases/download/v${version}/Ostara-${version}-arm64.dmg`,
+  Windows: `https://github.com/krud-dev/ostara/releases/download/v${version}/Ostara-Setup-${version}.exe`,
+  Default: 'https://github.com/krud-dev/ostara/releases/latest',
+}
+
 function updateDownloadLinks(os) {
   const downloadLinks = document.getElementsByClassName('download-link');
   for (let i = 0; i < downloadLinks.length; i++) {
