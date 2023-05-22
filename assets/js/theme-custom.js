@@ -22,34 +22,55 @@ function updateDownloadLinksAllOS() {
   }
 }
 
-if (navigator.userAgentData) {
-  navigator.userAgentData.getHighEntropyValues(['architecture']).then((result) => {
+function initDownloadLinks() {
+  if (navigator.userAgentData) {
+    navigator.userAgentData.getHighEntropyValues(['architecture']).then((result) => {
+      let OSName = "Unknown";
+      if (window.navigator.userAgent.toLowerCase().indexOf("windows") !== -1) {
+        OSName = "Windows";
+      } else if (window.navigator.userAgent.toLowerCase().indexOf("mac") !== -1) {
+        if (result.architecture && result.architecture.toLowerCase().indexOf("arm") !== -1) {
+          OSName = "MacArm";
+        } else {
+          OSName = "Mac";
+        }
+      } else if (window.navigator.userAgent.toLowerCase().indexOf("linux") !== -1) {
+        OSName = "Linux";
+      }
+      updateDownloadLinks(OSName);
+    }).catch(() => {
+      updateDownloadLinks("Unknown")
+    });
+  } else {
     let OSName = "Unknown";
     if (window.navigator.userAgent.toLowerCase().indexOf("windows") !== -1) {
       OSName = "Windows";
     } else if (window.navigator.userAgent.toLowerCase().indexOf("mac") !== -1) {
-      if (result.architecture && result.architecture.toLowerCase().indexOf("arm") !== -1) {
-        OSName = "MacArm";
-      } else {
-        OSName = "Mac";
-      }
+      OSName = "Mac";
     } else if (window.navigator.userAgent.toLowerCase().indexOf("linux") !== -1) {
       OSName = "Linux";
     }
     updateDownloadLinks(OSName);
-  }).catch(() => {
-    updateDownloadLinks("Unknown")
-  });
-} else {
-  let OSName = "Unknown";
-  if (window.navigator.userAgent.toLowerCase().indexOf("windows") !== -1) {
-    OSName = "Windows";
-  } else if (window.navigator.userAgent.toLowerCase().indexOf("mac") !== -1) {
-    OSName = "Mac";
-  } else if (window.navigator.userAgent.toLowerCase().indexOf("linux") !== -1) {
-    OSName = "Linux";
   }
-  updateDownloadLinks(OSName);
+
+  updateDownloadLinksAllOS();
 }
 
-updateDownloadLinksAllOS();
+function initCookieConsent() {
+  if (localStorage.getItem('cookie-consent') !== 'true') {
+    const cookieConsent = document.getElementById('cookie-consent');
+    if (cookieConsent) {
+      cookieConsent.className = cookieConsent.className.replace('d-none', '');
+    }
+  }
+
+  const cookieConsentClose = document.getElementById('cookie-consent-close');
+  if (cookieConsentClose) {
+    cookieConsentClose.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'true');
+    });
+  }
+}
+
+initDownloadLinks();
+initCookieConsent();
