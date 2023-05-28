@@ -39,7 +39,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXXH00F7GZ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
       gtag('js', new Date());
 
       gtag('config', 'G-LXXH00F7GZ');
@@ -78,7 +82,8 @@
                         <a class="nav-link" href="https://docs.ostara.dev/" target="_blank" rel="noopener noreferrer">Docs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://discord.gg/VJ82fuSYxd" target="_blank" rel="noopener noreferrer">Discord</a>
+                        <a class="nav-link" href="https://discord.gg/VJ82fuSYxd" target="_blank"
+                           rel="noopener noreferrer">Discord</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://krud.dev/" target="_blank" rel="noopener noreferrer">Blog</a>
@@ -382,7 +387,7 @@
 
     <section class="muse-section mb-4" data-aos="fade-up">
         <h2 class="h1 border-bottom border-gray-800 pb-4 pb-md-5 mb-0">Frequently asked questions</h2>
-        <div class="accordion muse-collapes" id="accordionExample">
+        <div class="accordion muse-collapes" id="accordionFaq">
             <div class="card">
                 <div class="card-header p-0" id="headingOne">
                     <h4 class="mb-0 d-grid">
@@ -393,14 +398,15 @@
                     </h4>
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                     data-bs-parent="#accordionExample">
+                     data-bs-parent="#accordionFaq">
                     <div class="card-body lh-lg">
-                        <div class="col-lg-8">Ostara for Spring is a modern tool for managing and monitoring
-                            actuator-enabled microservices, similar to Spring Boot Admin, that aims to make the process
-                            more user-friendly and straightforward.<br/><br/>
+                        <div class="col-lg-8">
+                            Ostara for Spring is a modern tool for managing and monitoring
+                            actuator-enabled microservices, a Spring Boot Admin alternative, that aims to make the
+                            process more user-friendly and straightforward.<br/><br/>
                             Ostara allows you to gain insights into the performance and health of your applications by
                             providing real-time data of metrics such as CPU and memory usage, app and system properties,
-                            beans and their dependencies, and much more. In addition the app allows you to perform
+                            beans and their dependencies, and much more. In addition, the app allows you to perform
                             actions on your applications like changing log levels and evict caches.
                         </div>
                     </div>
@@ -416,16 +422,13 @@
                         </button>
                     </h4>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFaq">
                     <div class="card-body lh-lg">
-                        <div class="col-lg-8">After developing and maintaining 100s of microservices,
-                            a common pain point that we faced is monitoring and managment of these microservices,
-                            for multiple clients and multiple environments.
-                            We used many of the availible tools to try and solve this problem, but many required us to
-                            host the solution,
-                            and make changes to our services.<br/><br/>
-                            One of our main goals with Ostara was to create a tool that just works out
-                            of the box, without needing anything besides a functioning Actuator API on the other end.
+                        <div class="col-lg-8">
+                            After developing and maintaining 100s of microservices, a common pain
+                            point that we faced is monitoring and management of these microservices, for multiple
+                            clients and multiple environments. We used many of the available tools to try and solve this
+                            problem, but many required us to host the solution, and make changes to our services.
                         </div>
                     </div>
                 </div>
@@ -441,36 +444,17 @@
                     </h4>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                     data-bs-parent="#accordionExample">
+                     data-bs-parent="#accordionFaq">
                     <div class="card-body lh-lg">
-                        <div class="col-lg-8">No. All you need is a functioning <a
+                        <div class="col-lg-8">
+                            No. All you need is a functioning <a
                                 href="https://www.baeldung.com/spring-boot-actuators" target="_blank"
                                 rel="noopener noreferrer">Spring Boot Actuator</a> API. If you are not sure how to do it
                             check out our <a href="https://docs.ostara.dev/getting-started/quick-start" target="_blank"
-                                             rel="noopener noreferrer">Quick Start Guide</a>.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header p-0" id="headingfive">
-                    <h4 class="mb-0 d-grid">
-                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false"
-                                aria-controls="collapsefive">
-                            What is the pricing for Ostara?
-                        </button>
-                    </h4>
-                </div>
-                <div id="collapsefive" class="collapse" aria-labelledby="headingfive"
-                     data-bs-parent="#accordionExample">
-                    <div class="card-body lh-lg">
-                        <div class="col-lg-8">Ostara is completely free! (and Open-Source). You can download it for free
-                            <a
-                                    href="https://github.com/krud-dev/ostara/releases/latest" target="_blank"
-                                    rel="noopener noreferrer">here</a> and check out the code <a
-                                    href="https://github.com/krud-dev/ostara" target="_blank"
-                                    rel="noopener noreferrer">here</a>.
+                                             rel="noopener noreferrer">Quick Start Guide</a>.<br/><br/>Ostara utilizes
+                            all the spring boot actuator endpoints to build a simple and intuitive spring boot admin
+                            panel. Without any need for code changes, and completely decoupled from your spring boot
+                            applications.
                         </div>
                     </div>
                 </div>
@@ -486,15 +470,62 @@
                     </h4>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                     data-bs-parent="#accordionExample">
+                     data-bs-parent="#accordionFaq">
                     <div class="card-body lh-lg">
                         <div class="col-lg-8">1. <a href="https://github.com/krud-dev/ostara/releases/latest"
                                                     target="_blank" rel="noopener noreferrer">Download</a> the app.<br/>2.
                             <a href="https://docs.ostara.dev/documentation/instances/creating-updating-instances"
                                target="_blank" rel="noopener noreferrer">Add</a> your Actuator API URL.<br/>3. That's
-                            it. Everything is ready to manage and monitor your Spring Boot applications with ease.<br/>More info is available in the <a
+                            it. Everything is ready to manage and monitor your Spring Boot applications with ease.<br/>More
+                            info is available in the <a
                                     href="https://docs.ostara.dev/getting-started/quick-start" target="_blank"
                                     rel="noopener noreferrer">Quick Start Guide</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingfive">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false"
+                                aria-controls="collapsefive">
+                            What is the pricing for Ostara?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsefive" class="collapse" aria-labelledby="headingfive"
+                     data-bs-parent="#accordionFaq">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">Ostara is completely free! (and Open-Source). You can download it for free
+                            <a
+                                    href="https://github.com/krud-dev/ostara/releases/latest" target="_blank"
+                                    rel="noopener noreferrer">here</a> and check out the code <a
+                                    href="https://github.com/krud-dev/ostara" target="_blank"
+                                    rel="noopener noreferrer">here</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingspringbootadmin">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsespringbootadmin"
+                                aria-expanded="false"
+                                aria-controls="collapsespringbootadmin">
+                            What is the main difference between Ostara and Spring Boot Admin?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsespringbootadmin" class="collapse" aria-labelledby="headingspringbootadmin"
+                     data-bs-parent="#accordionFaq">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            The short answer, the setup process.<br/>
+                            Spring Boot Admin requires you to host a service and modify your code to get an admin panel.
+                            On the other hand Ostara only requires you to install an app on your local machine to gain
+                            access to a user-friendly admin panel.
                         </div>
                     </div>
                 </div>
@@ -509,7 +540,7 @@
                         </button>
                     </h4>
                 </div>
-                <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
+                <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-bs-parent="#accordionFaq">
                     <div class="card-body lh-lg">
                         <div class="col-lg-8">Yes! The app's documentation is available at <a
                                 href="https://docs.ostara.dev/" target="_blank" rel="noopener noreferrer">https://docs.ostara.dev/</a>.
@@ -521,17 +552,43 @@
                 </div>
             </div>
             <div class="card">
+                <div class="card-header p-0" id="headingcontact">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsecontact" aria-expanded="false"
+                                aria-controls="collapsecontact">
+                            How can I contact you?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsecontact" class="collapse" aria-labelledby="headingcontact"
+                     data-bs-parent="#accordionFaq">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Well the best place is our <a href="https://discord.gg/VJ82fuSYxd" target="_blank"
+                                                          rel="noopener noreferrer">Discord</a>, but if you run into a
+                            bug, <a href="https://github.com/krud-dev/ostara/issues" target="_blank"
+                                    rel="noopener noreferrer">create an issue</a>,
+                            and we will be on it ASAP. If all else fails, email us at <a
+                                href="mailto:support@ostara.dev"
+                                target="_blank"
+                                rel="noopener noreferrer">support@ostara.dev</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
                 <div class="card-header p-0" id="headingseven">
                     <h4 class="mb-0 d-grid">
                         <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false"
                                 aria-controls="collapseseven">
-                            How can I help?
+                            How can I contribute?
                         </button>
                     </h4>
                 </div>
                 <div id="collapseseven" class="collapse" aria-labelledby="headingseven"
-                     data-bs-parent="#accordionExample">
+                     data-bs-parent="#accordionFaq">
                     <div class="card-body lh-lg">
                         <div class="col-lg-8">If you liked the project and would like to help you can support us
                             by:<br/>1. Starring the project on <a href="https://github.com/krud-dev/ostara"
@@ -602,7 +659,9 @@
     <section class="muse-section">
         <div class="bg-gray-800 position-relative overflow-hidden rounded-12">
             <div class="pb-4 pb-md-5 pt-2 pt-md-4 px-0 px-md-4">
-                <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://07l5u.mjt.lu/wgt/07l5u/vn9/form?c=5907c6e5" width="100%" style="height: 0;"></iframe>
+                <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://07l5u.mjt.lu/wgt/07l5u/vn9/form?c=5907c6e5" width="100%"
+                        style="height: 0;"></iframe>
 
                 <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
             </div>
@@ -660,17 +719,22 @@
     </div>
 </footer>
 
-<div id="cookie-consent" class="muse-cookie bg-black-600 py-3 alert alert-dismissible mb-0 fixed-bottom d-none" role="alert">
+<div id="cookie-consent" class="muse-cookie bg-black-600 py-3 alert alert-dismissible mb-0 fixed-bottom d-none"
+     role="alert">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-11 ps-0 ps-md-3">
                 <p class="mb-0 text-white font-weight-normal">We use cookies to improve the website experience.</p>
             </div>
             <div class="col-1 text-end px-0">
-                <a id="cookie-consent-close" href="#" class="text-secondary h4 mb-0 mt-1" data-bs-dismiss="alert" aria-label="Close"><svg data-name="icons/tabler/close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
-                    <rect data-name="Icons/Tabler/Close background" width="16" height="16" fill="none"/>
-                    <path d="M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z" transform="translate(2 2)" fill="#ffffff"/>
-                </svg>
+                <a id="cookie-consent-close" href="#" class="text-secondary h4 mb-0 mt-1" data-bs-dismiss="alert"
+                   aria-label="Close">
+                    <svg data-name="icons/tabler/close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                         viewBox="0 0 16 16">
+                        <rect data-name="Icons/Tabler/Close background" width="16" height="16" fill="none"/>
+                        <path d="M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z"
+                              transform="translate(2 2)" fill="#ffffff"/>
+                    </svg>
                 </a>
             </div>
         </div>
