@@ -567,7 +567,7 @@
                         <div class="col-lg-8">
                             Well the best place is our <a href="https://discord.gg/VJ82fuSYxd" target="_blank"
                                                           rel="noopener noreferrer">Discord</a>, but if you run into a
-                            bug, <a href="https://github.com/krud-dev/ostara/issues" target="_blank"
+                            bug, <a href="https://github.com/krud-dev/ostara/issues/new/choose" target="_blank"
                                     rel="noopener noreferrer">create an issue</a>,
                             and we will be on it ASAP. If all else fails, email us at <a
                                 href="mailto:support@ostara.dev"
@@ -650,6 +650,204 @@
                     <div class="text-end mt-lg-5 pt-lg-5">
                         <img src="assets/img/download-app.png" class="img-fluid rounded-top-start"
                              alt="Download the Ostara desktop app">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="muse-section mb-4" data-aos="fade-up">
+        <h2 class="h1 border-bottom border-gray-800 pb-4 pb-md-5 mb-0">Technical questions</h2>
+        <div class="accordion muse-collapes" id="accordionFaqTechnical">
+            <div class="card">
+                <div class="card-header p-0" id="headingroadmap">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseroadmap" aria-expanded="false"
+                                aria-controls="collapseroadmap">
+                            What are you planning to add to Ostara? (i.e. roadmap)
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapseroadmap" class="collapse" aria-labelledby="headingroadmap"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            We have many new features in the pipeline, you can check out our open feature requests <a
+                                href="https://github.com/krud-dev/ostara/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement"
+                                target="_blank" rel="noopener noreferrer">here</a>.
+                            If you have a suggestion, feel free to <a
+                                href="https://github.com/krud-dev/ostara/issues/new/choose"
+                                target="_blank" rel="noopener noreferrer">create an issue</a>, we periodically go
+                            through them to
+                            prioritize and plan our next release.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingcompatible">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsecompatible" aria-expanded="false"
+                                aria-controls="collapsecompatible">
+                            Is Ostara compatible with frameworks other than Spring Boot?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsecompatible" class="collapse" aria-labelledby="headingcompatible"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Ostara is primarily built to work with Spring Boot Actuator, but it can also work with
+                            frameworks that support Actuator endpoints. You can leverage Ostara alongside existing
+                            monitoring solutions for enhanced insights and management capabilities.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingenvironments">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseenvironments" aria-expanded="false"
+                                aria-controls="collapseenvironments">
+                            Can I monitor applications running on different environments with Ostara?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapseenvironments" class="collapse" aria-labelledby="headingenvironments"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Absolutely! Ostara supports monitoring and managing applications across multiple
+                            environments, including development, staging, and production. You can gain valuable insights
+                            and perform actions on your Spring Boot applications, regardless of the environment they are
+                            deployed in.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingscale">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsescale" aria-expanded="false"
+                                aria-controls="collapsescale">
+                            Is Ostara suitable for both small-scale and large-scale applications?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsescale" class="collapse" aria-labelledby="headingscale"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Ostara is designed to cater to applications of all sizes, from small-scale deployments to
+                            large-scale architectures. Whether you have a single microservice or a complex microservices
+                            ecosystem, Ostara provides scalable monitoring and management capabilities to suit your
+                            application's needs.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingrequirements">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapserequirements" aria-expanded="false"
+                                aria-controls="collapserequirements">
+                            What are the system requirements for running Ostara?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapserequirements" class="collapse" aria-labelledby="headingrequirements"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Ostara has modest system requirements, making it accessible for various setups. It can be
+                            installed on different operating systems (Windows, Mac, Linux) and requires minimal
+                            resources, ensuring smooth performance. Detailed system requirements and <a
+                                href="https://docs.ostara.dev/getting-started/quick-start" target="_blank"
+                                rel="noopener noreferrer">installation
+                            instructions</a> can be found in the documentation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingmetrics">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsemetrics" aria-expanded="false"
+                                aria-controls="collapsemetrics">
+                            How often does Ostara fetch and update metrics from Actuator endpoints?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsemetrics" class="collapse" aria-labelledby="headingmetrics"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Ostara fetches and updates metrics from Actuator endpoints at regular intervals. We cache
+                            the results locally to reduce overhead against your services.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingcloud">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsecloud" aria-expanded="false"
+                                aria-controls="collapsecloud">
+                            Can Ostara connect to services in the cloud or containerized deployment?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsecloud" class="collapse" aria-labelledby="headingcloud"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Of course! Ostara seamlessly connects to services deployed in the cloud or containerized
+                            deployments. It can monitor and manage applications running on platforms like Kubernetes,
+                            Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, or any other cloud
+                            provider. All you need to do is expose the Spring Boot Actuator endpoint to your local
+                            device, which can be done publicly or via VPN.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header p-0" id="headingcustom">
+                    <h4 class="mb-0 d-grid">
+                        <button class="btn btn-light text-start collapsed p-3 rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapsecustom" aria-expanded="false"
+                                aria-controls="collapsecustom">
+                            Can I show data from custom Actuator endpoints?
+                        </button>
+                    </h4>
+                </div>
+                <div id="collapsecustom" class="collapse" aria-labelledby="headingcustom"
+                     data-bs-parent="#accordionFaqTechnical">
+                    <div class="card-body lh-lg">
+                        <div class="col-lg-8">
+                            Certainly! We encourage you to add custom pages that display data from your own Actuator
+                            endpoints within Ostara. If your customization is something that others can benefit from, we
+                            invite you to create a pull request and contribute it to the main repository, making it
+                            available for everyone to use.<br/><br/>
+                            However, we understand that there may be cases where you prefer to maintain your
+                            modifications privately. In such instances, you have the option to fork the repository and
+                            work on your own version of Ostara tailored to your specific needs.<br/><br/>
+                            We are also excited to inform you that we are currently working on a plugin
+                            system for Ostara. This upcoming feature will enable users to develop plugins and extensions
+                            to add custom code and functionality to Ostara without the need to modify the core
+                            application. This will provide even more flexibility for customization while keeping your
+                            modifications separate from the main Ostara codebase.<br/><br/>
+                            If you require any assistance while writing custom code or have any questions, please don't
+                            hesitate to reach out. We are more than happy to help you out and provide guidance on
+                            integrating your custom code or utilizing the plugin system once it becomes available.
+
+                        </div>
                     </div>
                 </div>
             </div>
